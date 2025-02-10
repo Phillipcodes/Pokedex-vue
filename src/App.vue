@@ -19,14 +19,14 @@ export default {
     data() {
         return {
              BASEURL:'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0',
-             pokemons: []
+             pokemonList: []
         }
     },
     methods: {
       async fetchPokemonData() {
         const response = await fetch(this.BASEURL);
         const pokeData = await response.json();
-        this.pokemons = pokeData.results;
+        this.pokemonList = pokeData.results;
         console.log(this.pokemons);
         
       }
