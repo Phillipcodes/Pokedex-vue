@@ -1,7 +1,6 @@
 <template lang="">
     
-    <div class="w-[350px] h-[225px] bg-gray-300 flex items-center justify-center text-black relative rounded-[8px]">
-        <div class="w-3/4 h-3/4>"></div>
+    <div class=" bg-gray-300 flex items-center justify-center text-black relative rounded-[8px] ">
         <img :src="pokemonForCard.img">
         <div class="tag absolute  right-[-35px] top-[65px]"></div>
         <div class="tag absolute  right-[-35px] top-[95px]"></div>
