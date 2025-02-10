@@ -1,15 +1,16 @@
 <template lang="">
     
    <HeaderComponent></HeaderComponent>
-
+    <PokeCard></PokeCard>
 
 </template>
 <script>
 import HeaderComponent from './components/Header.vue';
+import PokeCard from './components/PokeCard.vue';
 export default {
     name:'app',
     components: {
-        HeaderComponent,
+        HeaderComponent,PokeCard
     } 
 }
 </script>
