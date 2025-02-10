@@ -1,9 +1,8 @@
 <template lang="">
   <HeaderComponent></HeaderComponent>
   <div class="p-[32px]">
-    <PokeCard></PokeCard>
-    <div v-if="pokemonList.length > 0" v-for="pokemon in fullLoadedPokemon" :key="pokemon.name">{{ pokemon.name }}</div>
-    <div v-else>Loading...</div>
+    <PokeCard v-if="fullLoadedPokemon.length > 0" v-for="pokemon in fullLoadedPokemon" :key="pokemon.name" :pokemonForCard="pokemon">{{ pokemon.name }}></PokeCard>
+   
   </div>
 </template>
 <script>
@@ -33,7 +32,7 @@ export default {
     },
 
     async fullLoadPokemon() {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 1; i++) {
         const getPokemonUrl = this.pokemonList[i].url;
         const response = await fetch(getPokemonUrl);
         const fullPokemonData = await response.json();
