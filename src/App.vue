@@ -2,6 +2,8 @@
     
    <HeaderComponent></HeaderComponent>
     <PokeCard></PokeCard>
+    <div v-if="pokemons.length > 0">{{pokemons[0].name}}</div>
+    <div v-else>Loading...</div>
 
 </template>
 <script>
@@ -11,7 +13,26 @@ export default {
     name:'app',
     components: {
         HeaderComponent,PokeCard
-    } 
+    } ,
+
+    data() {
+        return {
+             BASEURL:'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0',
+             pokemons: []
+        }
+    },
+    methods: {
+      async fetchPokemonData() {
+        const response = await fetch(this.BASEURL);
+        const pokeData = await response.json();
+        this.pokemons = pokeData.results;
+        console.log(this.pokemons);
+        
+      }
+    },
+    mounted() {
+        this.fetchPokemonData()
+    }
 }
 </script>
 <style lang="scss">
