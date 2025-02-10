@@ -1,11 +1,19 @@
-<script setup lang="ts">
-
-</script>
-
-<template>
-  
+<template lang="">
+    
+   <HeaderComponent></HeaderComponent>
 </template>
+<script>
+import HeaderComponent from './components/Header.vue';
+export default {
+    name:'app',
+    components: {
+        HeaderComponent,
+    } 
+}
+</script>
+<style lang="scss">
+     body {
+        margin: 0;
 
-<style scoped>
-
+    }
 </style>
