@@ -1,6 +1,6 @@
 <template lang="">
     
-    <div class="rounded-full  size-48 bg-gray-300 flex items-center justify-center text-black relative">
+    <div class="w-[350px] h-[225px] bg-gray-300 flex items-center justify-center text-black relative rounded-[8px]">
         <div class="w-3/4 h-3/4>">here could stay your ad</div>
         
         <div class="tag absolute  right-[-35px] top-[65px]"></div>

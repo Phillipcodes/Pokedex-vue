@@ -1,10 +1,11 @@
 <template lang="">
     
    <HeaderComponent></HeaderComponent>
+    <div class="p-[32px]">
     <PokeCard></PokeCard>
     <div v-if="pokemons.length > 0">{{pokemons[0].name}}</div>
     <div v-else>Loading...</div>
-
+</div>
 </template>
 <script>
 import HeaderComponent from './components/Header.vue';
