@@ -45,7 +45,7 @@ export default {
       name: fullPokemonData.name,
       img: fullPokemonData.sprites.other.dream_world.front_default,
     };
-    this.currentPokemon.push(transformedPokemonData);  // In bufferArray speichern
+    this.currentPokemon.push(transformedPokemonData);  // save in currentPokemon
     console.log(this.pokemonList);
     
   }
